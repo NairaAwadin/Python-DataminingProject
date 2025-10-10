@@ -62,7 +62,7 @@ Pemet de :
     - Génerer un IBAN automatiquement avec le choix entre une clé iban fixe et une clé dynamique
     - Vérifier un IBAN via une API externe
 
-![Interface generateur iban](IBAN/images/interface_iban.jpg)
+![Interface generateur iban](Bank_Processing/images/interface_iban.jpg)
 
 #### Tests IBAN valides / non valides
 
@@ -75,35 +75,35 @@ Chiffre d'indicatif national	E1
 
 -> Résultat : la clé est calculé dynamiquement, elle est égale à 82 et on a le message "IBAN valide" qui s'affiche, lorsqu'on vérfie l'iban
 
-![Interface generateur iban](IBAN/images/test_1.jpg)
+![Test 1](Bank_Processing/images/test_1.jpg)
 
 Test 2 : Iban généré à partir du meme fichier .txt, cette fois ci avec une clé static
 
 -> Résultat : la clé qui s'affiche au debut de l'iban est une clé fixe = à 14, et lorsqu'on vérifie l'IBAN, le message "IBAN invalide" s'affiche en rouge.
 
-![Interface generateur iban](IBAN/images/test_2.jpg)
+![Test 2](Bank_Processing/images/test_2.jpg)
 
 #### Tests de gestion d'erreurs
 
 Test 3 : Fichier vide
 -> Résultat : On a le message "Le fichier est vide !" qui s'affiche lorsqu"on essaye de télécharger un fichier vide
 
-![Interface generateur iban](IBAN/images/test_3.jpg)
+![Test 3](Bank_Processing/images/test_3.jpg)
 
 Test 4 : champs manquants - On enlève la ligne "Chiffre d'indicatif national	E1" du fichier
 -> Résultat : On a le message "Informations manquantes dnas le fichier" qui s'affiche en rouge
 
-![Interface generateur iban](IBAN/images/test_4.jpg)
+![Test 4](Bank_Processingimages/test_4.jpg)
 
 Test 5 : si je supprime une valeur manuellement (ex : le numéro de compte)
 -> Résultat : Le message "Champs manquants" s'affiche en rouge
 
-![Interface generateur iban](IBAN/images/test_5.jpg)
+![Test 5](Bank_Processing/images/test_5.jpg)
 
 Test 6 : Si je supprime manuellement la case IBAN généré
 -> Résultat : Le message "Aucun IBAN généré à vérifier s'affiche en rouge"
 
-![Interface generateur iban](IBAN/images/test_6.jpg)
+![Test 6](Bank_Processing/images/test_6.jpg)
 
 Test 7 : seulement la valeur à extraire manque - Exemple de fichier .txt
 
@@ -118,7 +118,7 @@ Test 8 : si l'orthographe des mots clés à extraire est incorrecte (ex: chifre 
 
 -> Résultat : L'information n'est pas récupérée, car le programme recherche les mots exactes définis dans extract_iban() - Le message "Informations manquantes dnas le fichier" s'affiche dans l'interface en rouge
 
-![Interface generateur iban](IBAN/images/test_7et8.jpg)
+![Test 7 et 8](Bank_Processing/images/test_7et8.jpg)
 
 Test 9 : Si on change l'ordre des informations à extraire
 
@@ -129,7 +129,7 @@ Code agence	01005
 
 -> Résultat : Le programme recupère quand même les informations de l'IBAN correctement
 
-![Interface generateur iban](IBAN/images/test_9.jpg)
+![Test 9](Bank_Processing/images/test_9.jpg)
 
 ### ANALYSE ET COMMENTAIRES
 
