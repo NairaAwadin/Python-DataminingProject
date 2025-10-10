@@ -1,0 +1,4 @@
+Numero de compte bancaire	0500013M026
+Chiffre d'indicatif national	E1
+Code banque	20041
+Code agence	01005
