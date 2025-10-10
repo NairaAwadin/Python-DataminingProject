@@ -4,6 +4,7 @@ Contributeurs : Léo, Yane, Paul, Mika et Naira
 Date : 19/10/2025
 Langage : Python
 Bibliothèques utilisées : tkinter, requests
+Norme de commits : [ADD], [MODIF], [SUPP]
 
 -------------------------------------------------------------
 
