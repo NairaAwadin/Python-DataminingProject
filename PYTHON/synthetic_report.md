@@ -152,7 +152,7 @@ Test 9 : Si on change l'ordre des informations à extraire
 
 ### CONCLUSION
 
-Le générateur IBAN est un outil combiant :
+Le générateur IBAN est un outil combinant :
 - Traitement de fichier texte
 - Calcul algorithmique
 - Interface graphique(Tkinter)
