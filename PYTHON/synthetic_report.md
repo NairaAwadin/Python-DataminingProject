@@ -156,7 +156,7 @@ Le générateur IBAN est un outil combinant :
 - Traitement de fichier texte
 - Calcul algorithmique
 - Interface graphique(Tkinter)
-- Connexion à une API externe
+- Connexion à une API externe (OpenIBAN)
 
 -------------------------------------------------------------
 
