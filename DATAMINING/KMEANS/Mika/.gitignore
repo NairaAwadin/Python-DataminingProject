@@ -14,9 +14,3 @@ venv/
 .DS_Store
 .idea/
 .vscode/
-
-# Data / artifacts (customize these)
-data/
-logs/
-*.parquet
-*.pkl
