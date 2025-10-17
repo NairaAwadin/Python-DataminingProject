@@ -16,7 +16,7 @@ libs (imports) :
 files :
 3 notebooks :
 	+ "k-algorithms.ipynb" -> k-means algo.
-	+ "vectorize_dataset_seloger.ipynb" -> clean,vectorize seloger.com dataset + fill missing some values with linear regression models.
+	+ "vectorize_dataset_seloger.ipynb" -> clean,vectorize seloger.com dataset + fill some missing values with linear regression models.
 	+ "k-means-applied.ipynb" -> apply k-means algo to predict resdential properties prices from scraped seloger.com vectorized dataset.
 
 4 executable files :
