@@ -32,7 +32,7 @@ def get_shortestDistancePairs(classified_pts : list = None ,unclassified_pts : l
                 shortest_distance = distance
                 nearest_neighbour = c_pt
             elif math.isclose(distance,shortest_distance) :
-                min_lexi_pt = min([c_pt,classified_pts[i-1]])
+                min_lexi_pt = min([c_pt,nearest_neighbour])
                 nearest_neighbour = min_lexi_pt
         pairs[uc_pt] = nearest_neighbour
     if classify_classified : 
