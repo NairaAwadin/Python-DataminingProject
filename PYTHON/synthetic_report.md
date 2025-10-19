@@ -239,15 +239,15 @@ Lorsque une séquence CGC apparaît cela compterait comme une seule combinaison.
 
 1. Affichage de l'interface de sélection du fichier 
 
-![alt text](DNA_f1.PNG)
+![alt text](DNA_Processing/images/DNA_f1.PNG)
 
 2. Ouverture de l'explorateur de fichier
 
-![alt text](DNA_f2.PNG)
+![alt text](DNA_Processing/images/DNA_f2.PNG)
 
 3. Affichage du fichier et résultats de l'analyse de séquence
 
-![alt text](DNA_f3.PNG)
+![alt text](DNA_Processing/images/DNA_f3.PNG)
 
 -------------------------------------------------------------
 
