@@ -253,4 +253,14 @@ Lorsque une séquence CGC apparaît cela compterait comme une seule combinaison.
 
 ## SCRAPPING
 
-...
+### Objectif du projet :  
+
+Le projet vise à compter extraire automatiquement des données pertinentes depuis des sites web afin de les analyser, structurer et exploiter.</br>
+Il permet de collecter de grandes quantités d’informations rapidement sans intervention manuelle.</br>
+Ces données peuvent ensuite être utilisées pour des études, comparaisons de prix, analyses de marché ou automatisations.</br>
+Ici, on extrait les données du site seloger.com.</br>
+
+### Résultats
+
+Le résultat du programme se présente sous forme de fichiers JSON et CSV. </br>
+Avec des données prêtes pour l’analyse, la visualisation ou l’entraînement de modèles.</br>
