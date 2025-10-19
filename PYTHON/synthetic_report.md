@@ -162,7 +162,92 @@ Le générateur IBAN est un outil combinant :
 
 ## DNA PROCESSING
 
-...
+### Objectif du projet :  
+
+Le projet vise à compter le pourcentage de combinaison C+G ou G+C et A+T ou T+A d'une séquence d'ADN inscrite dans un fichier. 
+
+Lorsque une séquence CGC apparaît cela compterait comme une seule combinaison. 
+
+### Méthodologie :  
+
+1. Définition de la fonction principale
+---   
+   La fonction ouvrir_traiter_fichier(zone_texte) (avec zone_texte le widget Text où on affichera le contenu du fichier et les résultats) permet de gérer toute la partie technique de notre programme. Entre autre elle permet d'ouvrir, de lire et d'analyser notre séquence d'ADN.
+
+2. Ouverture du fichier et lecture du fichier 
+----
+    L'ouverture du fichier se fait grâce à la fonction open et la lecture par la fonction read :   
+    try:
+        with open(chemin, "r", encoding="utf-8") as f:
+            contenu = f.read()
+    
+    En cas de problème lors de l'ouverture le système nous prévient de l'erreur grâce à un message textuel : 
+
+    except Exception as e:
+        messagebox.showerror("Erreur", f"Impossible de lire le fichier :\n{e}")
+        return None
+
+3. Analyse de l'ADN
+---
+    Une fois la séquence d'ADN récupérer, une boucle while va examiner la séquence par paire et incrémenter un compteur de CG/GC et TA/AT en fonction des comparaisons. 
+
+    i = 0
+    cg_count = 0
+    at_count = 0
+    while i < len(my_dna) - 1:
+        pair = my_dna[i:i+2]
+        if pair in ("CG", "GC"):
+            cg_count += 1
+            i += 2
+            continue
+        elif pair in ("AT", "TA"):
+            at_count += 1
+            i += 2
+            continue
+        i += 1
+
+    La dernière ligne permet d'avancer d’une seule lettre pour continuer la recherche si aucune paire n'est identifié.
+
+4. Interface Graphique (Tkinter)
+---   
+    Enfin grâce à l'import du module Tkinter sous le raccourci tk, on crée notre interface graphique qui affichera une fenêtre avec un bouton qui nous permettra d'ouvrir l'explorateur de fichiers afin de sélectionner notre séquence et de l'afficher avec le résultat de l'analyse de celle-ci. 
+
+    On affiche le contenu du fichier :
+    zone_texte.config(state=tk.NORMAL)
+    zone_texte.delete("1.0", tk.END)
+    zone_texte.insert(tk.END, contenu)
+
+    On génère la fenêtre principale : 
+    fenetre = tk.Tk()
+    fenetre.title("Analyse ADN")
+    fenetre.geometry("600x400")
+
+    On crée la zone de texte :
+    zone_texte = tk.Text(fenetre, wrap="word", width=70, height=20)
+    zone_texte.pack(padx=10, pady=10)
+
+    On crée le bouton d'action :
+    bouton = tk.Button(fenetre, text="Ouvrir et analyser ADN", 
+                    command=lambda: ouvrir_traiter_fichier(zone_texte))
+    bouton.pack(pady=10)
+
+
+    fenetre.mainloop()
+
+
+### Résultats
+
+1. Affichage de l'interface de sélection du fichier 
+
+![alt text](DNA_f1.PNG)
+
+2. Ouverture de l'explorateur de fichier
+
+![alt text](DNA_f2.PNG)
+
+3. Affichage du fichier et résultats de l'analyse de séquence
+
+![alt text](DNA_f3.PNG)
 
 -------------------------------------------------------------
 
